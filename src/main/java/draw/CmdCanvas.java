@@ -1,18 +1,18 @@
 package draw;
 
-import model.Screen;
+import model.Canvas;
 
-public class CmdScreen implements Screen {
+public class CmdCanvas implements Canvas {
 
     private static final int WIDTH = 100;
-    private static final int HEIGHT = 10;
+    private static final int HEIGHT = 48;
 
     private static final char BLANK = ' ';
     private static final char DOT = '#';
 
     private final char[][] screenContent = new char[HEIGHT][WIDTH];
 
-    public CmdScreen() {
+    public CmdCanvas() {
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
                 screenContent[i][j] = BLANK;

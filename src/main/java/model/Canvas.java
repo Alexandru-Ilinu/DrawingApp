@@ -1,6 +1,6 @@
 package model;
 
-public interface Screen {
+public interface Canvas {
 
     void dot(int x, int y);
 

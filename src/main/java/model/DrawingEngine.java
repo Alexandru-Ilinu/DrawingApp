@@ -1,18 +1,17 @@
 package model;
 
-import draw.CmdScreen;
-import draw.ScreenCoordinates;
+import draw.CmdCanvas;
 
 public class DrawingEngine {
 
-    private final Screen screen = new CmdScreen();
+    private final Canvas canvas = new CmdCanvas();
 
     public void draw(Rectangle[] rectangles) {
 
         for (Rectangle rectangle : rectangles) {
             drawRectangle(rectangle);
         }
-        screen.display();
+        canvas.display();
     }
 
     private void drawRectangle(Rectangle rectangle) {
@@ -54,13 +53,13 @@ public class DrawingEngine {
 
     private void drawHorizontalLine(int y, int x1, int x2) {
         for (int x = x1; x <= x2; x++) {
-            screen.dot(x, y);
+            canvas.dot(x, y);
         }
     }
 
     private void drawVerticalLine(int x, int y1, int y2) {
         for (int y = y1; y <= y2; y++) {
-            screen.dot(x, y);
+            canvas.dot(x, y);
         }
     }
 }
