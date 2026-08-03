@@ -1,8 +1,5 @@
 package model;
 
-/**
- model.Rectangle class is used to represent and draw a rectangle.
- */
 public class Rectangle {
 
 	public final int width;
@@ -10,6 +7,12 @@ public class Rectangle {
 	public final int x;
 	public final int y;
 
+	/**
+	 * @param x >= 0
+	 * @param y >= 0
+	 * @param width >= 0
+	 * @param height >= 0
+	 */
 	public Rectangle(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
@@ -17,11 +20,6 @@ public class Rectangle {
 		this.height = height;
 	}
 
-	/**
-	 * constructs a rectangle
-	 * @param width width of the rectangle, must be >= 0
-	 * @param height height of the rectangle, must be >= 0
-	 */
 	public Rectangle(int width, int height) {
 		this(0, 0, width, height);
 	}

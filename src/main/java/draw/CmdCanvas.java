@@ -22,7 +22,7 @@ public class CmdCanvas implements Canvas {
 
     @Override
     public void dot(int x, int y) {
-        screenContent[HEIGHT - 1 - y][x] = DOT;
+        screenContent[y][x] = DOT;
     }
 
     @Override
