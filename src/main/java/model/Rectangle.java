@@ -28,4 +28,8 @@ public class Rectangle {
 		this(0, 0);
 	}
 
+	public Rectangle(Point origin) {
+		this(origin.x, origin.y, 1, 1);
+	}
+
 }
