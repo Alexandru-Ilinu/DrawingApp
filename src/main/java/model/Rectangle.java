@@ -20,4 +20,12 @@ public record Rectangle(int x, int y, int width, int height) {
 		this(origin.x(), origin.y(), 1, 1);
 	}
 
+	public Rectangle(Point origin, int width, int height) {
+		this(origin.x(), origin.y(), width, height);
+	}
+
+	public Rectangle(Point origin, Dimension dimension) {
+		this(origin.x(), origin.y(), dimension.width(), dimension.height());
+	}
+
 }
