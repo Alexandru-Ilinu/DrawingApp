@@ -5,7 +5,7 @@ import model.Canvas;
 public class CmdCanvas implements Canvas {
 
     private static final int WIDTH = 100;
-    private static final int HEIGHT = 48;
+    private static final int HEIGHT = 24;
 
     private static final char BLANK = ' ';
     private static final char DOT = '#';

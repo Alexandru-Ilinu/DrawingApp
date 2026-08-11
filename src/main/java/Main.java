@@ -1,9 +1,7 @@
-import model.DrawingLogic;
+import model.MainLogic;
 
 class Main {
-
     public static void main(String[] args) {
-        new DrawingLogic().onStart();
+        new MainLogic().onStart();
     }
-
 }
