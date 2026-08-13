@@ -1,12 +1,18 @@
 package model;
 
 import draw.CmdCanvas;
+import java.util.List;
 
 public class DrawingEngine {
 
-    private final Canvas canvas = new CmdCanvas();
+    private final Canvas canvas;
 
-    public void draw(Rectangle[] rectangles) {
+    public DrawingEngine(Resolution resolution) {
+        canvas = new CmdCanvas(resolution);
+    }
+
+
+    public void draw(List<Rectangle> rectangles) {
 
         for (Rectangle rectangle : rectangles) {
             drawRectangle(rectangle);

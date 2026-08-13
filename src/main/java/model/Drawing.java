@@ -1,7 +1,15 @@
 package model;
 
-public interface Drawing {
+import java.util.List;
 
-    Rectangle[] getRectangles();
+public abstract class Drawing {
+
+    public final Resolution resolution;
+
+    public Drawing(Resolution resolution) {
+        this.resolution = resolution;
+    }
+
+    public abstract List<Rectangle> getRectangles();
 
 }

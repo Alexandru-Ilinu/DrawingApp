@@ -1,18 +1,22 @@
 package draw;
 
 import model.Canvas;
+import model.Resolution;
 
 public class CmdCanvas implements Canvas {
-
-    private static final int WIDTH = 100;
-    private static final int HEIGHT = 24;
 
     private static final char BLANK = ' ';
     private static final char DOT = '#';
 
-    private final char[][] screenContent = new char[HEIGHT][WIDTH];
+    private final int WIDTH;
+    private final int HEIGHT;
 
-    public CmdCanvas() {
+    private final char[][] screenContent;
+
+    public CmdCanvas(Resolution resolution) {
+        WIDTH = resolution.width();
+        HEIGHT = resolution.height();
+        screenContent = new char[HEIGHT][WIDTH];
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
                 screenContent[i][j] = BLANK;
