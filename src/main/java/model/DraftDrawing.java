@@ -1,11 +1,9 @@
-package model.drawings;
-
-import model.*;
+package model;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class DraftDrawing extends Drawing {
+class DraftDrawing extends Drawing {
 
     public DraftDrawing() {
         super(new Resolution(12, 12));

@@ -1,7 +1,5 @@
 package model;
 
-import model.drawings.DraftDrawing;
-
 public class MainLogic {
 
     public void onStart() {

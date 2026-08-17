@@ -3,14 +3,13 @@ package model;
 import draw.CmdCanvas;
 import java.util.List;
 
-public class DrawingEngine {
+class DrawingEngine {
 
     private final Canvas canvas;
 
     public DrawingEngine(Resolution resolution) {
         canvas = new CmdCanvas(resolution);
     }
-
 
     public void draw(List<Rectangle> rectangles) {
 

@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-public abstract class Drawing {
+abstract class Drawing {
 
     public final Resolution resolution;
 

@@ -6,7 +6,7 @@ package model;
  * @param width  >= 0
  * @param height >= 0
  */
-public record Rectangle(int x, int y, int width, int height) {
+record Rectangle(int x, int y, int width, int height) {
 
 	public Rectangle(int width, int height) {
 		this(0, 0, width, height);
