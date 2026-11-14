@@ -21,38 +21,38 @@ class DrawingEngine {
 
     private void drawRectangle(Rectangle rectangle) {
 
-        if (rectangle.height() > 0) {
+        if (rectangle.getHeight() > 0) {
             drawUpperSide(rectangle);
             drawLowerSide(rectangle);
         }
-        if (rectangle.width() > 0) {
+        if (rectangle.getWidth() > 0) {
             drawLeftSide(rectangle);
             drawRightSide(rectangle);
         }
     }
 
     private void drawUpperSide(Rectangle rectangle) {
-        int x1 = rectangle.x();
-        int x2 = rectangle.x() + rectangle.width() - 1;
-        drawHorizontalLine(rectangle.y(), x1, x2);
+        int x1 = rectangle.x;
+        int x2 = rectangle.x + rectangle.getWidth() - 1;
+        drawHorizontalLine(rectangle.y, x1, x2);
     }
 
     private void drawLowerSide(Rectangle rectangle) {
-        int x1 = rectangle.x();
-        int x2 = rectangle.x() + rectangle.width() - 1;
-        int y = rectangle.y() + rectangle.height() - 1;
+        int x1 = rectangle.x;
+        int x2 = rectangle.x + rectangle.getWidth() - 1;
+        int y = rectangle.y + rectangle.getHeight() - 1;
         drawHorizontalLine(y, x1, x2);
     }
 
     private void drawLeftSide(Rectangle rectangle) {
-        int y2 = rectangle.y() + rectangle.height() - 1;
-        drawVerticalLine(rectangle.x(), rectangle.y(), y2);
+        int y2 = rectangle.y + rectangle.getHeight() - 1;
+        drawVerticalLine(rectangle.x, rectangle.y, y2);
     }
 
     private void drawRightSide(Rectangle rectangle) {
-        int x = rectangle.x() + rectangle.width() - 1;
-        int y1 = rectangle.y();
-        int y2 = rectangle.y() + rectangle.height() - 1;
+        int x = rectangle.x + rectangle.getWidth() - 1;
+        int y1 = rectangle.y;
+        int y2 = rectangle.y + rectangle.getHeight() - 1;
         drawVerticalLine(x, y1, y2);
     }
 
